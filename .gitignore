@@ -1,0 +1,15 @@
+# Raw upstream data (~470 MB) — see README for clone instructions.
+tennis_MatchChartingProject-master/
+tennis_pointbypoint-master/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
