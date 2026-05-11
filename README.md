@@ -137,7 +137,7 @@ output/
 README.md
 ```
 
-The raw point-by-point data is **not** committed to keep the repo small.
+
 Grab it from the upstream sources below and drop the folders next to
 `Project.py`.
 
@@ -150,14 +150,6 @@ Grab it from the upstream sources below and drop the folders next to
   current pipeline):
   <https://github.com/JeffSackmann/tennis_pointbypoint>
 
-After cloning this repo:
-
-```bash
-git clone https://github.com/JeffSackmann/tennis_MatchChartingProject.git \
-    tennis_MatchChartingProject-master
-git clone https://github.com/JeffSackmann/tennis_pointbypoint.git \
-    tennis_pointbypoint-master
-```
 
 ## Running the pipeline
 
@@ -170,23 +162,6 @@ python3 Project.py          # ATP (men's), default
 A self-test (12 parser unit tests + an end-to-end mini-game) runs first
 on every invocation.  CSVs and PNGs are written into `output/`.
 
-## Limitations & future work
 
-* **Single-event-per-point.**  The brief's appendix proposes a
-  two-row-per-point variant (one row per perspective).  Implementing it
-  is straightforward — duplicate every classified point with opposite
-  sign — and would change `w(e)` slightly but not the qualitative
-  conclusions.
-* **Ace vs. service winner not separated.**  MCP combines unreturnables
-  (`#`) with aces (`*`); the brief explicitly accepts this.
-* **No surface / opponent adjustment.**  X is currently a raw average.
-  Future work: compute X per surface (clay/hard/grass) or against an
-  opponent-strength baseline.
-* **Reference population window.**  We use 2020s data only; widening
-  to all available years would stabilise weights for less-charted
-  players (e.g. Nadal currently has only 4 k classified points in
-  this window even though he is in 418 MCP matches overall).
-
----
 
 **Course:** CS 682, Spring 2026
